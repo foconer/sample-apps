@@ -15,5 +15,6 @@
   <modules>
     <module>spring-restws-app</module>
     <module>spring-restws-it</module>
+    <module>spring-restws-common</module>
   </modules>
 </project>
