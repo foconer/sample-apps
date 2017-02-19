@@ -1,16 +1,16 @@
 package spring.restws.test.client;
 
+import static java.lang.String.format;
+
 import org.springframework.web.client.RestTemplate;
 
 import spring.restws.rest.dto.CustomerEntity;
 
 public class CustomerResourceTestClient {
   
-  private static final RestTemplate restTemplate = new RestTemplate();
-  
-  private static final String customerResourceTemplace = "http://localhost:8080/customer/%s";
+  private static final String REQUEST_URL_TEMPLATE = "http://localhost:8080/customer/%s";
   
   public CustomerEntity getCustomer(String name) {
-	  return restTemplate.getForObject(String.format(customerResourceTemplace, name), CustomerEntity.class);
+    return (new RestTemplate()).getForObject(format(REQUEST_URL_TEMPLATE, name), CustomerEntity.class);
   }
 }

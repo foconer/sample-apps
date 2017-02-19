@@ -78,7 +78,7 @@
             <configuration>
               <skipTests>false</skipTests>
               <includes>
-                <include>**/*</include>
+                <include>**/*Test.classes</include>
               </includes>
             </configuration>
           </execution>
